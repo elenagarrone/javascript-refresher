@@ -22,7 +22,11 @@ function selectElementsStartingWithVowel(array) {
 // Question 3
 
 function removeNullsFromArray(array) {
-
+  newArray = [];
+  for (i = 0; i < array.length; i++){
+    if (array[i] !== null){ newArray.push(array[i]) }
+  }
+  return newArray;
 };
 
 // Question 4
