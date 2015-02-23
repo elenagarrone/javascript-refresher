@@ -11,7 +11,12 @@ function selectElementsStartingWithE(array) {
 // Question 2
 
 function selectElementsStartingWithVowel(array) {
-
+  newArray = [];
+  for (i = 0; i < array.length; i++){
+    firstLetter = array[i].charAt(0)
+    if ('aeiou'.indexOf(firstLetter) > -1){ newArray.push(array[i]) }
+  }
+  return newArray;
 };
 
 // Question 3
