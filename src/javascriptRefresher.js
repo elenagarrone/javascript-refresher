@@ -1,7 +1,7 @@
 // Question 1
 
 function selectElementsStartingWithE(array) {
-  newArray = [];
+  var newArray = [];
   for (i = 0; i < array.length; i++){
     if (array[i].charAt(0) === 'e'){ newArray.push(array[i]) }
   }
@@ -11,7 +11,7 @@ function selectElementsStartingWithE(array) {
 // Question 2
 
 function selectElementsStartingWithVowel(array) {
-  newArray = [];
+  var newArray = [];
   for (i = 0; i < array.length; i++){
     firstLetter = array[i].charAt(0)
     if ('aeiou'.indexOf(firstLetter) > -1){ newArray.push(array[i]) }
@@ -22,10 +22,10 @@ function selectElementsStartingWithVowel(array) {
 // Question 3
 
 function removeNullsFromArray(array) {
-  newArray = [];
-  for (i = 0; i < array.length; i++){
-    if (array[i] !== null){ newArray.push(array[i]) }
+  var isNotNull = function(el){
+    return el !== null
   }
+  var newArray = array.filter(isNotNull)
   return newArray;
 };
 
