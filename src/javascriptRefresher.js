@@ -13,7 +13,7 @@ function selectElementsStartingWithE(array) {
 function selectElementsStartingWithVowel(array) {
   var newArray = [];
   for (i = 0; i < array.length; i++){
-    firstLetter = array[i].charAt(0)
+    firstLetter = array[i].charAt(0);
     if ('aeiou'.indexOf(firstLetter) > -1){ newArray.push(array[i]) }
   }
   return newArray;
@@ -23,9 +23,9 @@ function selectElementsStartingWithVowel(array) {
 
 function removeNullsFromArray(array) {
   var isNotNull = function(el){
-    return el !== null
+    return el !== null;
   }
-  var newArray = array.filter(isNotNull)
+  var newArray = array.filter(isNotNull);
   return newArray;
 };
 
@@ -33,9 +33,9 @@ function removeNullsFromArray(array) {
 
 function removeNullsAndFalseFromArray(array) {
   var isNotNullAndFalse = function(el){
-    return el !== null && el !== false
+    return el !== null && el !== false;
   }
-  var newArray = array.filter(isNotNullAndFalse)
+  var newArray = array.filter(isNotNullAndFalse);
   return newArray;
 };
 
@@ -44,8 +44,8 @@ function removeNullsAndFalseFromArray(array) {
 function reverseEveryElementInArray(array) {
   var newArray = [];
   for (i = 0; i < array.length; i++){
-    var reversedElement = array[i].split('').reverse().join('')
-    newArray.push(reversedElement)
+    var reversedElement = array[i].split('').reverse().join('');
+    newArray.push(reversedElement);
   }
   return newArray;
 };
@@ -53,29 +53,39 @@ function reverseEveryElementInArray(array) {
 // Question 6
 
 function dropFirstThreeElements(array) {
-
+  var newArray = array.slice(3);
+  return newArray;
 };
 
 // Question 7
 
 function addElementToBeginningOfArray(array, element) {
-
+  array.unshift(element);
+  return array;
 };
 
 // Question 8
 
 function sortArrayByLastLetterOfEachWord(array) {
-
+  array.sort(function(a, b){
+    var aLastLetter = a.slice(-1);
+    var bLastLetter = b.slice(-1);
+    return aLastLetter < bLastLetter ? -1 : aLastLetter > bLastLetter ? 1 : 0
+  })
+  return array;
 };
 
 // Question 9
 
 function returnFirstHalfOfString(string) {
-
+  var middle = Math.floor(Math.round(string.length / 2));
+  var string = string.slice(0, middle);
+  return string;
 };
 
 // Question 10
 
 function makeNumberNegative(number) {
-  
+  number = -Math.abs(number);
+  return number;
 };
