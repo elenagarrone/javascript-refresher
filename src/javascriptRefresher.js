@@ -32,13 +32,22 @@ function removeNullsFromArray(array) {
 // Question 4
 
 function removeNullsAndFalseFromArray(array) {
-
+  var isNotNullAndFalse = function(el){
+    return el !== null && el !== false
+  }
+  var newArray = array.filter(isNotNullAndFalse)
+  return newArray;
 };
 
 // Question 5
 
 function reverseEveryElementInArray(array) {
-
+  var newArray = [];
+  for (i = 0; i < array.length; i++){
+    var reversedElement = array[i].split('').reverse().join('')
+    newArray.push(reversedElement)
+  }
+  return newArray;
 };
 
 // Question 6
